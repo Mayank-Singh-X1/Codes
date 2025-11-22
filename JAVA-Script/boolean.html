@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <style>
+    button{
+      border-radius:60px;
+      padding:15px;
+      border:1px solid black;
+      transition:background-color 0.1s linear;
+
+    }
+   button:active{
+    background-color: blue;
+   }
+  
+  </style>
+
+  <script>
+   let Compmove;
+   let UserMove;
+
+ 
+  </script>
+
+</head>
+<body style="background-color:rgb(88,88,88)">
+ 
+  <button onClick="UserMove='rock';
+     Compmove=Math.random();
+
+  if(Compmove>0 && Compmove<=0.33){
+    Compmove='rock';
+  }else if(Compmove>0.33 && Compmove<=0.66){
+    Compmove='paper';
+  }else{
+    Compmove='scissor';
+  }
+
+  if(Compmove==='scissor'){
+    console.log('YOU WON');
+  }else if(Compmove==='rock'){console.log('Draw');}
+  else{console.log('You lose');
+}console.log('Computer move : '+Compmove);
+  ">rock</button>
+
+
+  <button onClick="
+  UserMove='paper';
+     Compmove=Math.random();
+
+  if(Compmove>0 && Compmove<=0.33){
+    Compmove='rock';
+  }else if(Compmove>0.33 && Compmove<=0.66){
+    Compmove='paper';
+  }else{
+    Compmove='scissor';
+  }
+
+  if(Compmove==='scissor'){
+    console.log('You loose');
+  }else if(Compmove==='rock'){console.log('You won');}
+  else{console.log('draw');
+}
+console.log('Computer move : '+Compmove);
+">paper</button>
+
+  <button onClick="
+  UserMove='scissor';
+     Compmove=Math.random();
+
+  if(Compmove>0 && Compmove<=0.33){
+    Compmove='rock';
+  }else if(Compmove>0.33 && Compmove<=0.66){
+    Compmove='paper';
+  }else{
+    Compmove='scissor';
+  }
+
+  if(Compmove==='scissor'){
+    console.log('Draw');
+  }else if(Compmove==='rock'){console.log('You loose');}
+  else{console.log('you won');
+}
+console.log('Computer move : '+Compmove);">Scissor</button>
+</body>
+</html

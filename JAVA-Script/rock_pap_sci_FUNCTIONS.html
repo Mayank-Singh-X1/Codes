@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rock paper cissor functions</title>
+
+   <style>
+    button{
+      border-radius:60px;
+      padding:15px;
+      border:1px solid black;
+      transition:background-color 0.1s linear;
+
+    }
+   button:active{
+    background-color: blue;
+   }
+  
+  </style>
+
+  <script>
+   let Compmove;
+   let UserMove;
+   let result;
+
+   const score={
+    wins : 0,
+    looses:0,
+    draws:0
+   };
+
+   function score_count(){
+    if(result==='win'){
+      score.wins+=1;
+    }else if(result==='loose'){
+      score.looses+=1;
+    }else{
+      score.draws+=1;
+    }
+   }
+
+   function compMovefnc(){
+     Compmove=Math.random();
+
+  if(Compmove>0 && Compmove<=0.33){
+    Compmove='rock';
+  }else if(Compmove>0.33 && Compmove<=0.66){
+    Compmove='paper';
+  }else{
+    Compmove='scissor';
+  }}
+
+  function result_display(){
+    console.log('ComputerMove: '+Compmove+'\nYourMove: '+UserMove+'\n'+result);
+
+    console.log('Score \nwins: '+score.wins+'  looses: '+score.looses+'  draws: '+score.draws);
+
+  }
+
+  </script>
+
+</head>
+<body style="background-color:rgb(88,88,88)">
+ 
+  <button onClick="UserMove='rock';
+  compMovefnc();
+    
+  if(Compmove==='scissor'){
+    result='win';
+  }else if(Compmove==='rock'){result='draw';}
+  else{result='loose';
+}
+
+  score_count();
+  result_display();
+
+  ">rock</button>
+
+
+  <button onClick="
+  UserMove='paper';
+   compMovefnc();
+    
+  if(Compmove==='scissor'){
+    result='loose';
+  }else if(Compmove==='rock'){result='win';}
+  else{result='draw';
+}
+ score_count();
+  result_display();
+">paper</button>
+
+  <button onClick="
+  UserMove='scissor';
+     compMovefnc();
+    
+  if(Compmove==='scissor'){
+    result='draw';
+  }else if(Compmove==='rock'){result='loose';}
+  else{result='win';}
+ score_count();
+  result_display();
+">Scissor</button>
+
+<button onClick="
+  score.wins=0,
+  score.looses=0,
+  score.draws=0;
+
+  console.log('Score reseted succesfully');
+  alert('Score was reseted');
+">Reset score</button>
+
+</body>
+</html

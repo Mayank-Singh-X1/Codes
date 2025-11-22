@@ -1,0 +1,1 @@
+str1 ="Aice in wonder land"
