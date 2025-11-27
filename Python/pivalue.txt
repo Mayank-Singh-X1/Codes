@@ -1,6 +1,0 @@
-The only difference between this listing and the previous one is the pass 
-statement in the except block. Now when a FileNotFoundError is raised, the 
-code in the except block runs, but nothing happens. No traceback is pro
-duced, and there’s no output in response to the error that was raised. Users 
-see the word counts for each file that exists, but they don’t see any indica
-tion that a file wasn’t found:
