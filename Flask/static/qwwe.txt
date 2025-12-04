@@ -1,0 +1,10 @@
+Good Developer Traits:
+- Problem-solving
+- Clean code
+- Continuous learning
+- Collaboration
+- Debugging skills
+- Testing mindset
+- Attention to detail
+- Time management
+- Curiosity
