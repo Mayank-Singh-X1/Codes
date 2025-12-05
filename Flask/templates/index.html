@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Flask</title>
+    
+    <!-- LINKING THE STATIC CSS FILE -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="typing-text">SYSTEM ONLINE</h1>
+        <p>Welcome to the Flask interface. Initializing render_template protocol...</p>
+
+        <a href="/products" class="cyber-btn">ACCESS PRODUCTS</a>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>SPEED</h3>
+                <p>Rendering templates at light speed.</p>
+            </div>
+            <div class="card">
+                <h3>SECURE</h3>
+                <p>Backend logic separated securely.</p>
+            </div>
+            <div class="card">
+                <h3>SCALABLE</h3>
+                <p>Ready for future expansion.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Interactive Javascript -->
+    <script>
+        // A simple typing effect for the Header
+        const textElement = document.getElementById('typing-text');
+        const text = "FLASK SYSTEM"; // The text to type
+        let index = 0;
+        
+        // Clear text initially
+        textElement.innerHTML = "";
+
+        function typeWriter() {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 150); // Speed of typing
+            }
+        }
+
+        // Start the effect when page loads
+        window.onload = typeWriter;
+    </script>
+
+</body>
+</html>
