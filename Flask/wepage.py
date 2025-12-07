@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request,redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app=Flask(__name__)
@@ -14,18 +14,25 @@ class Dbdata(db.Model):
 
     def __repr__(self)-> str:
         return f"{self.id} is {self.name}"
+    
 
 @app.route("/")
 def homepage():
-    dbdata=Dbdata(name="qwerty",department="science")
-    db.session.add(dbdata)
+    show = Dbdata.query.all()
+    return render_template('index.html',show=show) 
+
+@app.route("/add", methods=["POST"])
+def add():
+    title = request.form.get("title")
+    new_item = Dbdata(name=title, department="science")
+    db.session.add(new_item)
     db.session.commit()
-    return render_template('index.html')
+    return redirect("/")
+
 
 @app.route("/products")
 def products():
-    show=Dbdata.query.all()
-    print(show)
+    
     return "This is product page"
 
 if __name__=="__main__":
