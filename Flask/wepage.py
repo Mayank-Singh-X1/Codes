@@ -9,7 +9,7 @@ db=SQLAlchemy(app)
 
 class Dbdata(db.Model):
     id=db.Column(db.Integer, primary_key=True)
-    name=db.Column(db.String(30), nullable=False, unique=True)
+    name=db.Column(db.String(30), nullable=False)
     department=db.Column(db.String(20), nullable=False)
 
     def __repr__(self)-> str:
@@ -17,10 +17,15 @@ class Dbdata(db.Model):
 
 @app.route("/")
 def homepage():
+    dbdata=Dbdata(name="qwerty",department="science")
+    db.session.add(dbdata)
+    db.session.commit()
     return render_template('index.html')
 
 @app.route("/products")
 def products():
+    show=Dbdata.query.all()
+    print(show)
     return "This is product page"
 
 if __name__=="__main__":
