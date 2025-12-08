@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="content">
+        <h1>Update Task</h1>
+
+        <form action="/update/{{ task.id }}" method="POST">
+            <input type="text" name="content" id="content" value="{{ task.content }}" required>
+            <input type="submit" value="Update Task">
+        </form>
+        
+        <br>
+        <a href="/" style="text-decoration: none; color: #333;">&larr; Back to Home</a>
+    </div>
+</body>
+</html>

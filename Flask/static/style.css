@@ -1,108 +1,84 @@
-   /* CSS STYLING */
-   body {
-       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-       background-color: #f0f2f5;
-       display: flex;
-       justify-content: center;
-       padding-top: 50px;
-   }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
 
-   .container {
-       background: white;
-       width: 400px;
-       padding: 30px;
-       border-radius: 10px;
-       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-   }
+.content {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
 
-   h1 {
-       text-align: center;
-       color: #333;
-   }
+h1 {
+    text-align: center;
+    color: #333;
+}
 
-   /* Form Styling */
-   form {
-       display: flex;
-       gap: 10px;
-       margin-bottom: 20px;
-   }
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
-   input[type="text"] {
-       flex-grow: 1;
-       padding: 10px;
-       border: 1px solid #ddd;
-       border-radius: 5px;
-       outline: none;
-   }
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-   .btn-add {
-       padding: 10px 20px;
-       background-color: #28a745;
-       color: white;
-       border: none;
-       border-radius: 5px;
-       cursor: pointer;
-       font-weight: bold;
-   }
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-   .btn-add:hover {
-       background-color: #218838;
-   }
+input[type="submit"]:hover {
+    background-color: #218838;
+}
 
-   /* List Styling */
-   ul {
-       list-style: none;
-       padding: 0;
-   }
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-   li {
-       background: #fff;
-       border-bottom: 1px solid #eee;
-       padding: 10px;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-   }
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
-   /* Helper classes for status */
-   .task-text {
-       font-size: 16px;
-       color: #333;
-   }
+th {
+    background-color: #f8f9fa;
+}
 
-   .task-done {
-       text-decoration: line-through;
-       color: #888;
-   }
+/* Action Buttons */
+a.btn-delete, a.btn-edit {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+}
 
-   /* Action Buttons */
-   .actions a {
-       text-decoration: none;
-       padding: 5px 10px;
-       border-radius: 4px;
-       font-size: 12px;
-       margin-left: 5px;
-   }
+a.btn-edit {
+    background-color: #007bff;
+}
 
-   .btn-check {
-       background-color: #007bff;
-       color: white;
-   }
+a.btn-delete {
+    background-color: #dc3545;
+}
 
-   .btn-delete {
-       background-color: #dc3545;
-       color: white;
-   }
-
-   .btn-check:hover {
-       background-color: #0069d9;
-   }
-
-   .btn-delete:hover {
-       background-color: #c82333;
-   }
-
-   .tag-complete {
-       background-color: #6c757d;
-       border: 1px solid #6c757d;
-   }
+a.btn-edit:hover { background-color: #0069d9; }
+a.btn-delete:hover { background-color: #c82333; }
