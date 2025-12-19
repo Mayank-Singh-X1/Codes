@@ -5,12 +5,40 @@ int high=Arrays.stream(arr).max().getAsInt();
 int result=high;
 
 while(low<=high){
-    int mid=low + (high - low)/2
-    if(num(mid)==k){
+    int mid=low + (high - low)/2;
+    int hours=0;
+
+    for(int pile : piles){
+        hours + = (pile + k -1)/k;
+    }
+
+    if(hours <= h){
         return mid;
-    }else if(arr[mid]<k){
+    }
+    if(arr[mid]<k){
         low=mid+1;       
     }else{
         high=mid-1
+    }
+}
+
+//1011
+
+class Solution {
+    public int shipWithinDays(int[] weights, int days) {
+
+        int low =Arrays.stream(weights).max().getAsInt();
+        int high=Arrays.stream(weights).sum();
+        int result=high;
+        while(low<=high){
+            int mid = low + (high -  low)/2;
+            int daysneeded=1;
+            int currentload=0;
+…                high=mid-1;
+            }    else{
+                low = mid +1;
+            }
+        }
+        return result;       
     }
 }
