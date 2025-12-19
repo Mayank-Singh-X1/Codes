@@ -1,0 +1,16 @@
+<!-- 875 Koko Eating Bananas -->
+
+int low=0;
+int high=Arrays.stream(arr).max().getAsInt();
+int result=high;
+
+while(low<=high){
+    int mid=low + (high - low)/2
+    if(num(mid)==k){
+        return mid;
+    }else if(arr[mid]<k){
+        low=mid+1;       
+    }else{
+        high=mid-1
+    }
+}
