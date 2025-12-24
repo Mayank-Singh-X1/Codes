@@ -22,3 +22,24 @@ while(low<=high){
     }
 }
 
+
+11
+class Solution {
+    public int maxArea(int[] height) {
+        int l= 0;
+        int r=height.length-1;
+        int max=0;
+        int area=0;
+        while(l<=r){
+            if(height[l]<height[r]){
+            area = (r-l)*(height[l]);
+            l++;
+        }else{
+            area = (r-l)*(height[r]);
+            r--;
+        }
+        max=Math.max(max,area);
+        }
+        return max;
+    }
+}
