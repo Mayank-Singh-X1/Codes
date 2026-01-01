@@ -2,8 +2,8 @@ import java.util.*;
 public class TAraining {
     public static void main(String[] args) {
         Scanner sc=new Scanner (System.in);
-      //longest subsequence in given array using two pointer approach
-      //input n=8  arr=1,2,3,1,2,3,4,2 output=4
+    //   longest contiguous sequence in given array using two pointer approach
+    //   input n=8  arr=1,2,3,1,2,3,4,2 output=4
         int n=sc.nextInt();
         int[] arr=new int[n];
         for(int i=0;i<n;i++){
@@ -11,6 +11,8 @@ public class TAraining {
                 arr[i]=sc.nextInt();              
             }
         }
+
+        
         HashMap<Integer, Integer> map=new HashMap<>();
         int left=0;
         int max_len=0;
