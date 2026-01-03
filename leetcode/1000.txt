@@ -60,3 +60,162 @@ class Solution {
 …        return memo[left][right];
     }
 }
+
+127 word ladder  //bfs is better approach than dfs for this problem
+class Solution {
+public:
+    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+        int n = wordList.size();
+        map<string,bool> vis;
+        //return dfs(beginWord , endWord , wordList , vis);
+        if(find(wordList.begin(), wordList.end(), endWord) == wordList.end())
+            return 0;
+
+       queue<string> pq;
+        pq.push(beginWord);
+        vis[beginWord] = 1;
+        int ans = 0;
+        while(pq.empty() == false){
+            int sz = pq.size();
+            for(int i = 0; i<sz; i++){
+                string str = pq.front();
+                pq.pop();
+                if(str == endWord) return ans+1;
+                for(auto x: wordList){
+                    int count = 0;
+                    for(int i = 0; i<str.size();i++){
+                        if(str[i] != x[i])count++;
+                    }
+                    if(count == 1 && vis[x] == 0){
+                        vis[x] = 1;
+                        pq.push(x);
+                    }     
+                }
+            }
+            ans++;
+        }
+
+        return 0;
+    }
+};
+
+
+
+126 word ladder 2
+
+class Solution {
+public:
+    void dfs(string beginWord , string curr ,map<string,vector<string>>& parent,  vector<string>& path,vector<vector<string>>& ans){
+        if(curr == beginWord){
+            vector<string> temp = path;
+            reverse(temp.begin() , temp.end());
+            ans.push_back(temp);
+            return;
+        }
+        for(auto x: parent[curr]){
+            path.push_back(x);
+            dfs(beginWord , x , parent , path , ans);
+            path.pop_back();
+        }
+    }
+    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
+        vector<vector<string>> ans = vector<vector<string>>();
+        int n = wordList.size();
+        map<string,bool> vis;
+        map<string,vector<string>> parent;
+        //return dfs(beginWord , endWord , wordList , vis);
+        if(find(wordList.begin(), wordList.end(), endWord) == wordList.end())
+            return ans;
+
+       queue<string> pq;
+        pq.push(beginWord);
+        vis[beginWord] = 1;
+        int flag = 0;    //print empty list if no path exist with same endWord
+        while (pq.empty() == false && flag == 0) {
+    int sz = pq.size();
+    map<string, bool> visinow;
+
+    for (int i = 0; i < sz; i++) {
+        string str = pq.front();
+        pq.pop();
+
+        for (auto x : wordList) {
+            int count = 0;
+            for (int k = 0; k < str.size(); k++) {
+                if (str[k] != x[k]) count++;
+            }
+
+            if (count == 1 && vis[x] == 0) {
+
+                if (visinow[x] == 0) {  
+                    visinow[x] = 1;
+                    pq.push(x);
+                }
+
+                parent[x].push_back(str); //str is the parent node of x 
+
+                if (x == endWord) {        //x =endword means there is possible path.
+                    flag = 1;             // so set flag true, it indicates that path is possible.
+                }
+            }
+        }
+    }
+
+    for (auto it : visinow) {            
+        vis[it.first] = 1;
+    }
+}
+
+        if(flag){
+            vector<string> path;
+            path.push_back(endWord);
+            dfs(beginWord ,endWord, parent,path , ans);
+        }
+        return ans;
+    }
+};
+
+785. Is Graph Bipartite?
+class Solution {
+public:
+    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
+        vector<vector<int>> adj(n,vector<int>()) ;
+        vector<int> indegree(n,0);
+        for(int i=0;i<edges.size();i++){
+            int u = edges[i][0];
+            int v = edges[i][1];
+
+            adj[u].push_back(v);
+            adj[v].push_back(u);
+            indegree[u]++;
+            indegree[v] ++;
+        }
+        queue<int> q;
+        for(int i=0;i<n;i++){
+            if(indegree[i] == 1){
+                q.push(i);
+                indegree[i]--;
+            }
+        }
+        
+        vector<int> ans;
+        while(q.empty() == false){
+
+            int n = q.size();
+            ans.clear();
+            for(int i=0;i<n;i++){
+                int curr = q.front();
+                q.pop();
+                ans.push_back(curr);
+                for(auto x:adj[curr]){
+                    indegree[x]--;
+                    if(indegree[x] == 1)q.push(x);
+                }
+            }
+        }
+
+        if(n == 1)ans.push_back(0);
+
+        return ans;
+    }
+};
