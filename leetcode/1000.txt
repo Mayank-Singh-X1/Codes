@@ -219,3 +219,52 @@ public:
         return ans;
     }
 };
+
+
+//721 acc. merge
+class Solution {
+public:
+    void dfs(string node, vector<string>&temp, unordered_set<string>&st, unordered_map<string, vector<string>>&graph){
+        st.insert(node);
+        temp.push_back(node);
+        for(auto edge: graph[node]){
+            if(!st.count(edge)){
+                dfs(edge, temp, st, graph);
+            }
+        }
+    }
+    vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
+        unordered_map<string, vector<string>> graph;
+        unordered_map<string, string>mapName;
+
+        for(auto name: accounts){
+            string ename = name[0];
+
+            for(int i=1; i<name.size(); i++){
+                mapName[name[i]] = ename;
+                graph[name[i]];
+                if(i==1)continue;
+
+                graph[name[1]].push_back(name[i]);
+                graph[name[i]].push_back(name[1]);
+            }
+        }
+
+        vector<vector<string>>ans;
+        unordered_set<string>st;
+        for(auto it: graph){
+            if(st.count(it.first)) continue;
+            vector<string>temp;
+            string node = it.first;
+            dfs(node, temp, st, graph);
+
+            sort(temp.begin(), temp.end());
+            temp.insert(temp.begin(), mapName[it.first]);
+            ans.push_back(temp);
+            
+        }
+
+        //sort(ans.begin(), ans.end());
+        return ans;
+    }
+};
