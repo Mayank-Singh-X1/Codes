@@ -1,0 +1,50 @@
+.circle1{
+    border-radius: 100px;
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: translate(50%, 50%);
+    border:2px solid black;
+    
+}
+.circle2{
+    border-radius: 65px;
+    /* position:relative; */
+    width: 130px;
+    height: 130px;
+    background-color: rgb(255, 255, 255);   
+    margin: 35px 0px 0px 35px;
+    border:1px solid black;
+
+}
+.circle3{
+    border-radius: 35px;
+    /* position:relative; */
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 35, 35);
+    margin: 30px 0px 0px 30px;
+    border:1px solid black;
+}
+.circle4{
+    border-radius: 15px;
+    /* position:relative; */
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    margin: 19px 0px 0px 19px;
+    border:1px solid black;
+}
+
+.box1{
+    border-radius: 0px;
+    position:relative;
+    margin:30px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(65, 65, 146);
+    transform: translate(50%, 50%);
+    border:2px solid black;
+    
+}
