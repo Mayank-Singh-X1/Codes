@@ -1,0 +1,135 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    opacity: 0.85;
+    z-index: -2;
+}
+
+nav {
+
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex1 {
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 5%;
+}
+
+.flex1 img {
+    height: 30px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.flex2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.flex2 p:nth-child(1) {
+    color: rgb(148, 149, 150);
+}
+
+.flex3 {
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+
+.flex3 button {
+    height: 30px;
+    border-radius: 45px;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #BEFF01;
+    overflow: hidden;
+    font-size: 490px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-width: 80vw;
+    font-weight: 900;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0%;
+    font-size: 80px;
+    opacity: 0.9;
+}
+
+.sidebar {
+    position:fixed;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    rotate: -90deg;
+    font-size: 20px;
+    gap: 40px;
+    font-weight:800;
+    height: 100%;
+    width: 10%;
+    z-index: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
