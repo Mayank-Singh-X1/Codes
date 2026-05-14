@@ -1,0 +1,108 @@
+body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    width:100%;
+    background: linear-gradient(to bottom, rgb(106, 238, 104)75%, rgb(255, 255, 255));
+    padding:10px;
+    height:13vh;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    width:20%;
+}
+.logo img{
+    height:60px;
+    width:60px;
+    object-fit: cover;
+}
+.search{
+    display:flex;
+    align-items:center;
+    width:30%;
+
+}
+.search input{
+    width:80%;
+    padding:14px;
+    border-radius:25px;
+    border:none;
+    font-size:16px;
+}
+
+.links{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    justify-content:end;
+    width:calc(100% - 30% - 30%);
+
+}
+
+.links button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    background-image: linear-gradient(90deg, rgb(51, 164, 61), rgb(247, 247, 116));
+    border:solid 1px white;
+    cursor:pointer;
+    font-size:16px;
+    transition: all ease .3s;
+}
+.links button:hover{
+    background-color:#50f0ff;
+    box-shadow:1px 1px 10px rgb(103, 102, 102);
+    border-radius:20px;
+    padding:10px 25px;
+    background-image: linear-gradient(90deg, rgb(0, 97, 187), rgb(98, 139, 226));
+    color:white;
+}
+
+.hero{
+    display:flex;
+    width:100%;
+    height:70vh;
+    background: linear-gradient(360deg, rgb(168, 168, 168)20%, rgb(255, 255, 255), rgb(168, 168, 168)20%);
+}
+.sidebar{
+    padding-left:20px;
+    width:20%;
+    height:100%;
+    background-color:rgb(240, 240, 240);
+}
+
+.heroright{
+    opacity:0.4;
+    height: 100%;
+    width: 80%;
+    background-color: yellow;
+    background-image: url("/photos/grocery.jpg");
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    gap:20px;
+}
+.row1, .row2, .row3{
+    
+    height:100vh;
+    width:30%;
+    background-color:rgba(35, 35, 205, 0.313);
+    border:1px solid black;
+}
+
+footer{
+    height:17vh;
+    background: linear-gradient(to top, rgb(179, 236, 244)75%, rgb(255, 255, 255));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    font-size:20px;
+}

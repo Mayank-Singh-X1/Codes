@@ -1,0 +1,96 @@
+Frontend Assessment
+HTML & CSS Only (NO JavaScript)
+Project: Grocery E-Commerce Website (Single Home Page)
+Objective
+Students must build a single-page grocery e-commerce website using only HTML5 and CSS3.
+ The design should be inspired by the home page layout of Amazon or Flipkart, but must not be copied.
+Technology Constraints
+Only HTML5 and CSS3 are allowed
+JavaScript is strictly not allowed
+No frameworks or libraries (Bootstrap, Tailwind, React, etc.)
+No backend
+One page only (index.html)
+Folder Structure (Mandatory)
+
+grocery-assessment/
+│── index.html
+│── style.css
+│── images/
+
+Required Sections
+1. Header / Navbar
+The navigation bar must include:
+• Grocery store logo (text or image)
+• Search bar (UI only, no functionality)
+• Navigation links:
+Home
+Categories
+Offers
+Cart
+CSS expectations:
+Flexbox for layout
+Proper alignment and spacing
+Hover effects on links
+Sticky navbar is optional
+
+
+2. Hero Section
+A large banner section at the top of the page:
+Background image or gradient
+Main heading
+Short description
+“Shop Now” button (UI only)
+CSS expectations:
+Background positioning
+Button hover transitions
+Clean typography
+
+3. Categories Section
+Display at least 5 grocery categories, such as:
+Fruits & Vegetables
+Dairy Products
+Snacks
+Beverages
+Household Items
+CSS expectations:
+CSS Grid layout
+Card-based design
+Hover effects on cards
+
+4. Featured Products Section
+Product cards must include:
+Product image
+Product name
+Price
+“Add to Cart” button (visual only)
+CSS expectations:
+Consistent card design
+Box-shadow and hover animation
+Proper spacing and alignment
+
+5. Offers / Deals Section
+A promotional section displaying:
+Discount banners or offer cards
+Highlighted text for deals
+CSS expectations:
+Good color contrast
+Clear section separation
+
+6. Footer
+Footer must include:
+Store description
+Contact information
+Copyright text
+CSS expectations:
+Clean layout
+Readable text hierarchy
+Responsiveness (Mandatory)
+Mobile view: stacked layout
+Tablet view: adjusted grid
+Desktop view: full layout
+Media queries must be used
+Design Guidelines
+Use Flexbox and Grid properly
+Maintain consistent colors and fonts
+Professional grocery store look
+Clean and organized CSS

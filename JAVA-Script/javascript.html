@@ -1,25 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 40px auto;
+            max-width: 800px;
+            line-height: 1.5;
+            color: black;
+        }
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .nested-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: -8px; /* Offset the padding of the parent td */
+        }
+        .nested-table td {
+            border: none;
+            border-bottom: 1px solid black;
+            padding: 8px;
+        }
+        .nested-table td:last-child {
+            border-bottom: none;
+        }
+        .border-right {
+            border-right: 1px solid black !important;
+        }
+    </style>
 </head>
-<body style="background-color:rgb(88, 88, 88)">
+<body>
 
-  <script>
-    result=0? 'truthy':'falsy';
-    console.log(result);
+    <h3>Practical 9</h3>
 
-    let var1=4 && console.log('motherfucker');
-    console.log(var1);
+    <p><strong>Aim:</strong> Write the test cases for the identified module.</p>
 
-    const currency=undefined||'USD';
-    console.log(currency);
+    <p>The testing process cannot take place without prior communication with the programmers of the software. This is because the testers cannot start testing the software unless they know what the code does and how it works. Similarly, communicating with other software testers is also important. It helps to understand:</p>
+    <ol>
+        <li>What to test?</li>
+        <li>What resources will be needed?</li>
+        <li>What will the schedule be?</li>
+    </ol>
 
- 
-  </script>
+    <p>The software test plan is the principal way through which software testers communicate their intent to the code developers. The test case is the heart of a test plan. A test case is a document that describes a set of data inputs and operating conditions required to run a test, together with the expected results of the run.</p>
 
-   
+    <p>The tester should run the software according to the test case documentation and then compare the actual results with the expected results noted in the documents.</p>
+
+    <p>If the obtained results are in complete agreement with the expected results, then it indicates that no error has been identified. The result of such a test case is said to be 'pass'.</p>
+
+    <p>A potential error is said to be identified when some or all of the results do not agree with the expected results. In such cases, the test case will have the status 'fail'</p>
+
+    <!-- Table 1 -->
+    <table>
+        <tr>
+            <th>Test Cases</th>
+            <th>Explanation</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>LOGIN</td>
+            <td>To check if only administrators, farmers, distributors, retailers, and inspectors will be able to login after filling in the correct details in the available fields. Check if it was successful.</td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>PREVIEW</td>
+            <td>To check if the farmer and distributor will be able to visit their respective role-based dashboards.</td>
+            <td>Pass</td>
+        </tr>
+    </table>
+
+    <!-- Table 2 -->
+    <table>
+        <tr>
+            <th>Test Case ID</th>
+            <th>Test case Objective</th>
+            <th>Test Case Description</th>
+            <th>Input</th>
+            <th>Expected Output</th>
+            <th>Results</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>To check the interface link between the login page and the home page</td>
+            <td>Click on the LOGIN Button</td>
+            <td style="padding: 0;">
+                <table class="nested-table border-right">
+                    <tr><td>Button Clicked</td></tr>
+                    <tr><td>Button not Clicked</td></tr>
+                </table>
+            </td>
+            <td style="padding: 0;">
+                <table class="nested-table">
+                    <tr><td>To be directed to the Home page</td></tr>
+                    <tr><td>Remains Unchanged</td></tr>
+                </table>
+            </td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>To check the interface link between the home page and the dashboard page</td>
+            <td>Click on the Dashboard Button</td>
+            <td style="padding: 0;">
+                <table class="nested-table border-right">
+                    <tr><td>Button Clicked</td></tr>
+                    <tr><td>Button not Clicked</td></tr>
+                </table>
+            </td>
+            <td style="padding: 0;">
+                <table class="nested-table">
+                    <tr><td>To be directed to Dashboard</td></tr>
+                    <tr><td>Remains Unchanged</td></tr>
+                </table>
+            </td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>To check the interface link between the Dashboard Page and Add Product Page</td>
+            <td>Click on the Add Product Button</td>
+            <td style="padding: 0;">
+                <table class="nested-table border-right">
+                    <tr><td>Button Clicked</td></tr>
+                    <tr><td>Button not Clicked</td></tr>
+                </table>
+            </td>
+            <td style="padding: 0;">
+                <table class="nested-table">
+                    <tr><td>To be directed to Add Product Page</td></tr>
+                    <tr><td>Remains Unchanged</td></tr>
+                </table>
+            </td>
+            <td>Pass</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>To check the interface link between the Product page and Verify authenticity window</td>
+            <td>Click on Scan/Verify</td>
+            <td style="padding: 0;">
+                <table class="nested-table border-right">
+                    <tr><td>Button Clicked</td></tr>
+                    <tr><td>Button not Clicked</td></tr>
+                </table>
+            </td>
+            <td style="padding: 0;">
+                <table class="nested-table">
+                    <tr><td>To be directed to Verify Window</td></tr>
+                    <tr><td>Remains Unchanged</td></tr>
+                </table>
+            </td>
+            <td>Pass</td>
+        </tr>
+    </table>
+
 </body>
 </html>

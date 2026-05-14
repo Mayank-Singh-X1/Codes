@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body, html{
+    margin:0;
+    padding:0;
+    background-color: rgb(255, 254, 234);
+
+}
+
+@font-face {
+    font-family: abc;
+    src: url(./helvetica-now-text/HelveticaNowText-Bold.woff);
+}
+
+.hero{
+    height: 100vh;
+    width:100%;
+    background-image: url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/pcq/media/media_files/2025/09/09/gta-6-websites-2025-09-09-13-40-28.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: transform 5s ease;
+    animation:slide 30s infinite;
+}
+
+@keyframes slides{
+    0%{
+    background-image: url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/pcq/media/media_files/2025/09/09/gta-6-websites-2025-09-09-13-40-28.jpg");
+    }
+    25%{
+        background-image: url("https://media-rockstargames-com.akamaized.net/tina-uploads/posts/75949277o5977k/0e8cfff3e1b55e71a6f514df01b784d17b831cf4.jpg?im=Resize,width=600");
+    }
+    50%{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMKR9XOt0WkP2edIhAs1e8D4Z0oIjJ-VPLRO29r2Idz9FOWc_O8Th2HebzWO6sGA9ByKA&usqp=CAU");
+    }
+    75%{
+        background-image: url("https://www.hindustantimes.com/ht-img/img/2023/03/04/1600x900/gta_online_1677926659384_1677927297875_1677927297875.jpg");
+    }
+    80%{
+        background-image: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F02%2Frockstar-games-website-teasing-new-game-rumor-twtr.jpg?w=960&cbr=1&q=90&fit=max");
+    }
+    90%{
+        background-image: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F02%2Frockstar-games-website-teasing-new-game-rumor-twtr.jpg?w=960&cbr=1&q=90&fit=max");
+    }
+    100%{
+    background-image: url("https://img-cdn.publive.online/fit-in/640x430/filters:format(webp)/pcq/media/media_files/2025/09/09/gta-6-websites-2025-09-09-13-40-28.jpg");
+    }
+}
+
+nav{
+    background: linear-gradient(180deg,black 1%, rgba(83, 82, 82, 0.502) 50%,rgba(255, 255, 255, 0.375) );
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width:100%;
+    margin :0;
+    padding:0px 20px;
+    height:11vh;
+    gap:20px; 
+}
+
+.left{
+    width: 10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.left img {
+    height: 40px; 
+    width: 40px;
+
+}
+
+.middle{
+    width:calc(100% - 10% - 20%);
+    padding:0px 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:35px;
+    font-family: abc;
+    font-size:14px;
+}
+.GAMES, .store, .support{
+    display:flex;
+    gap:4px;
+    align-items: center;
+}
+
+.middle div{
+    padding:10px 15px;
+    border-radius:30px;  
+}
+
+.middle div:hover{
+     background: rgba(237, 237, 237, 0.126);
+
+}
+
+.right{
+    width:20%;
+    display:flex;
+    align-items: center;
+    gap:20px;
+    font-size: 17px;
+}
+
+.get_launcher button{
+    border-radius:30px;
+    padding:10px 15px;
+    font-family: abc;
+    background: transparent;
+    border:solid 1px black;
+}
+
+.get_launcher button:hover{
+    background: rgba(217, 217, 217, 0.288);
+}
+
+
+
+

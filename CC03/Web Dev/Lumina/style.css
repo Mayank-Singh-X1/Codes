@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    position:relative;
+    background: radial-gradient(at top left , rgb(89, 159, 234) 30%, rgb(41, 97, 158)40% ,rgb(50, 136, 227) );
+}
+.overlay{
+    height: 100vh;
+    width: 100%;
+    position:absolute;
+
+}
+
+nav{
+    height: 12vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.262);
+    box-shadow: white 1px 1px 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:10px;
+    padding:20px;
+    font-family: "Poppins", sans-serif;
+
+}
+nav .div2{
+    width: 40%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 34;
+}
+
+nav .div2:hover{
+    text-decoration: underline;
+}
+
+
