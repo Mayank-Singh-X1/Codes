@@ -1,3 +1,4 @@
+package DSA;
 import java.util.*;
 public class DSA_4 {
     public static void main(String[] args) {

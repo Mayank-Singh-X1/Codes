@@ -1,3 +1,4 @@
+package DSA;
 public class Recursion {
     // public static void printnum(int n) {
     // if (n == 6) {
